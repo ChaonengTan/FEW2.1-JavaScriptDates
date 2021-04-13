@@ -122,15 +122,7 @@ console.log('--------- Problem 2 --------')
 // Takes an array of dates, returns an array of ordered dates
 
 function orderDates(dates) {
-    return dates.sort(function(a,b){
-        if (a.getTime()<b.getTime()){
-            return -1
-        }
-        if (a.getTime()>b.getTime()){
-            return 1
-        }
-        return 0
-    })
+    return dates.sort((a,b)=>a-b)
 }
 
 console.log(orderDates([today, dueDate, startDate, bday, newYear]))
